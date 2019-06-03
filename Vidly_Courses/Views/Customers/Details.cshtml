@@ -4,4 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h1>@Model.Name</h1>
+<ul>
+    <li>Membership Type: @Model.MembershipType.Name</li>
+    @if (Model.Birthday.HasValue)
+    {
+        <li>Birthdate: @Model.Birthday.Value.ToLongDateString()</li>
+    }
+</ul>
 
